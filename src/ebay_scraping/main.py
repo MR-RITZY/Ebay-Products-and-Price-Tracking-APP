@@ -2,8 +2,8 @@ from fastapi import FastAPI
 from hashlib import sha256
 
 
-from ebay_scraping.config import settings
-from ebay_scraping.schema import EbayChallengeResponse
+from src.ebay_scraping.config import settings
+from src.ebay_scraping.schema import EbayChallengeResponse
 
 app = FastAPI()
 
