@@ -1,0 +1,1 @@
+web: uvicorn src.ebay_scraping.main:app --host 0.0.0.0 --port $PORT
