@@ -14,6 +14,9 @@ dependencies = [
     "uvicorn>=0.38.0",
 ]
 
+[project.scripts]
+app = "src.ebay_scraping.main:app"
+
 
 [build-system]
 requires = ["uv_build>=0.9.9,<0.10.0"]
