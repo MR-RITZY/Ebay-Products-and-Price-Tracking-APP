@@ -1,6 +1,6 @@
-from fastapi import FastAPI, status
+from fastapi import FastAPI
 from hashlib import sha256
-from fastapi.responses import RedirectResponse
+
 
 from ebay_scraping.config import settings
 from ebay_scraping.schema import EbayChallengeResponse
