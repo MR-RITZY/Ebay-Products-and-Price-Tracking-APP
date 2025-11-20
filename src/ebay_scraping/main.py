@@ -10,7 +10,7 @@ app = FastAPI()
 
 @app.get("/ebay/callback", response_model=EbayChallengeResponse)
 async def get_ebay_challenge_code(challenge_code: str):
-    endcoded = f"{challenge_code}{settings.EBAY_VERIFICATION_TOKEN}{settings.BASE_URL}".encode()
+    endcoded = f"{challenge_code}{settings.EBAY_VERIFICATION_TOKEN}{settings.BASE_URL}/ebay/callback".encode()
     challenge_response = sha256(endcoded, usedforsecurity=True).hexdigest()
 
     return {"challengeResponse": challenge_response}
